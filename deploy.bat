@@ -1,13 +1,16 @@
-echo AAA
+@setlocal
+@pushd %~dp0
 
-call :deploy
+call do_deploy.bat
 
-echo BBB
+py -3.10 move_files.py
 
 @rem push to repository
 git add -A
 git commit -m "deploy"
 git push
 
-:deploy
-npm run deploy
+@popd
+@endlocal
+
+exit /b 0
