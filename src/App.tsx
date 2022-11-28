@@ -14,7 +14,7 @@ function App() {
     const [targetFilesize, setTargetFilesize] = useState<number>(0);
     const [overwriteImage, setOverwriteImage] = useState<FileUrl | null>(null);
     const [isProcessing, setIsProcessing] = useState<boolean>(false);
-    const [error, setError] = useState<string>("test");
+    const [error, setError] = useState<string>("");
 
     const executable = !((targetFilesize <= 0) || isNaN(targetFilesize) ||
                         (
