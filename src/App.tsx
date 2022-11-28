@@ -235,9 +235,9 @@ function App() {
                             }}
                             validate={value => {
                                 const str = value.toString();                      
-                                const maxSize = 1000000000;
+                                const maxSize = 1073741824;
                                 if (value <= 0 || str.indexOf(".") >= 0 || value > maxSize) {
-                                    return `1以上、${maxSize}未満の整数を入力してください。`
+                                    return `1以上、${maxSize}以下の整数を入力してください。`
                                 }
                                 return null;
                             }}
